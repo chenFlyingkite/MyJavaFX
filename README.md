@@ -9,4 +9,5 @@ https://blog.jetbrains.com/idea/2013/03/packaging-javafx-2-applications-in-intel
 https://docs.oracle.com/javase/8/javafx/api/javafx/scene/image/ImageView.html
 https://docs.oracle.com/javase/8/javafx/api/javafx/scene/image/Image.html
 
-
+# IntelliJ IDEA 2017.3 Help, Packaging JavaFX Applications
+https://www.jetbrains.com/help/idea/packaging-javafx-applications.html
