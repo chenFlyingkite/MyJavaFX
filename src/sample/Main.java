@@ -1,6 +1,9 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.Event;
+import javafx.event.EventDispatcher;
+import javafx.event.EventType;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
@@ -8,18 +11,37 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+
 public class Main extends Application {
+    private Parent mRoot;
+    private Scene mScene;
+    //private Controller mController;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        mRoot = root;
+        mScene = new Scene(root);
+        //mController = new Controller(primaryStage);
+        /*
+        mScene.addEventHandler(KeyEvent.ANY, mController);
+        mScene.addEventHandler(DragEvent.ANY, mController);
+        mScene.addEventHandler(MouseEvent.ANY, mController);
+        mScene.setOnKeyReleased(mController);
+        */
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(mScene);
+
+        //primaryStage.addEventHandler(KeyEvent.KEY_LAST, new Controller());
+        //primaryStage.addEventHandler(EventType, new Controller());
         primaryStage.show();
 
         //sample(primaryStage);
